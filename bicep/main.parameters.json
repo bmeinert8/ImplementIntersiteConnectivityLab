@@ -1,0 +1,91 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location":{
+            "value": "EastUS"
+        },
+        "location2": {
+            "value": "WestUS"
+        },
+        "virtualNetwork0Name": {
+            "value": "vnet0eus"
+        },
+        "virtualNetwork1Name": {
+            "value": "vnet1eus"
+        },
+        "virtualNetwork2Name": {
+            "value": "vnet2wus"
+        },
+        "vm0NetworkInterfaceName":{
+            "value": "nic0eus"
+        },
+        "vm1NetworkInterfaceName": {
+            "value": "nic1eus"
+        },
+        "vm2NetworkInterfaceName": {
+            "value": "nic2wus"
+        },
+        "networkSecurityGroup0Name": {
+            "value": "nsg0eus"
+        },
+        "networkSecurityGroup1Name": {
+            "value": "nsg1eus"
+        },
+        "networkSecurityGroup2Name": {
+            "value": "nsg2wus"
+        },
+        "virtualMachine0Name": {
+            "value": "vm0eus"
+        },
+        "virtualMachine1Name": {
+            "value": "vm1eus"
+        },
+        "virtualMachine2Name": {
+            "value": "vm2wus"
+        },
+        "osDisk0Name": {
+            "value": "vm0osdiskeus"
+        },
+        "osDisk1Name": {
+            "value": "vm1osdiskeus"
+        },
+        "osDisk2Name": {
+            "value": "vm2osdiskwus"
+        },
+        "virtualMachineManagedDiskStorageAccountType": {
+            "value": "Premium_LRS"
+        },
+        "vmSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "adminUsername": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/db727eda-5f15-499f-b5ee-1f1d46d99f23/resourceGroups/VnetPeeringLab/providers/Microsoft.KeyVault/vaults/VnetPeeringLabKVeus"
+                },
+                "secretName": "Username"
+            }
+        },
+        "adminPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/db727eda-5f15-499f-b5ee-1f1d46d99f23/resourceGroups/VnetPeeringLab/providers/Microsoft.KeyVault/vaults/VnetPeeringLabKVeus"
+                },
+                "secretName": "Password"
+            }
+        },
+        "publicIPAddress0Name": {
+            "value": "pip0eus"
+        },
+        "publicIPAddress1Name": {
+            "value": "pip1eus"
+        },
+        "publicIPAddress2Name": {
+            "value": "pip2eus"
+        },
+        "publicIPAddressSkuName": {
+            "value": "Standard"
+        }
+    }
+}
